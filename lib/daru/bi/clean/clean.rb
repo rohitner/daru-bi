@@ -31,6 +31,13 @@ module Daru
       def filter axis=:vector, &block
         dispatch_to_axis_pl axis, :filter, &block
       end
+  
+      def uniq(*vtrs)
+        vecs = vtrs.empty? ? vectors.map(&:to_s) : Array(vtrs)
+        grouped = group_by(vecs)
+        indexes = grouped.groups.values.map { |v| v[0] }.sort
+        row[*indexes]
+      end
     end
   end
 end
