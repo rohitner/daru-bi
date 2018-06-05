@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Rohit Ner']
   spec.email         = ['rohitner1@gmail.com']
   spec.summary       = 'Daru-BI is a plugin-gem to Daru gem, which stands for Data Analysis in RUby.'
-  spec.description   = Daru::IO::DESCRIPTION
+  spec.description   = Daru::BI::DESCRIPTION
   spec.homepage      = 'https://github.com/rohitner/daru-bi'
   spec.license       = 'MIT'
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
