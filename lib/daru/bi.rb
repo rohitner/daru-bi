@@ -1,7 +1,9 @@
-require "daru/bi/version"
+require 'daru'
+require 'daru/bi/version'
+require 'daru/bi/clean'
 
 module Daru
-  module BI
-    # Your code goes here...
+  class DataFrame
+    include Daru::BI::Clean
   end
 end
